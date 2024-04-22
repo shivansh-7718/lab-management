@@ -1,0 +1,18 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(236, 10, 108, 0.925);
+    padding: 10px 0;
+}
+.ColFooter{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.footer-anchor{
+    color: black;
+    text-decoration: none;
+}
