@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(236, 10, 108, 0.925);
+    background-color: rgba(6, 144, 190, 0.767);
     padding: 10px 0;
 }
 .ColFooter{
@@ -15,4 +15,45 @@
 .footer-anchor{
     color: black;
     text-decoration: none;
+}
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    /* background-color: #222; */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
 }

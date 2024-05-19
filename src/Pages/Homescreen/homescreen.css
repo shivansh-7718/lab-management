@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;   
-    background-image: linear-gradient(orange,#ffffff);
+    background-image: linear-gradient(rgb(118, 201, 232),#ffffff);
 
 }
 
@@ -44,6 +44,7 @@
 .topBtnsDiv{
     display: flex;
     margin-top: 20px;
+    
 }
 .btns-div{
     width: 120px;
@@ -55,11 +56,12 @@
     align-items: center;
     height: 30px;
     cursor: pointer;
-    background: linear-gradient(orange 0 0) var(--p,0) / var(--p,0) no-repeat;
+    background: linear-gradient(rgba(6, 144, 190, 0.767) 0 0) var(--p,0) / var(--p,0) no-repeat;
     transition: 0.8s, background-position 0s;
+    
 }
 .btns-div:hover{
-    background-color: orange;
+    background-color: rgb(17, 45, 105);
     --p:100%;
     color: #000000;
 }
@@ -82,7 +84,7 @@
 .testNameDiv{
     height: 270px;
     overflow: auto;
-    border: 1px solid orange;
+    border: 1px solid rgba(6, 144, 190, 0.767);
 }
 .testNameTitle{
     height: 40px;
@@ -92,12 +94,12 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: 450;
-    border-bottom: 1px solid orange;
-    background: linear-gradient(orange 0 0) var(--p,0) / var(--p,0) no-repeat;
+    border-bottom: 1px solid rgba(6, 144, 190, 0.767);
+    background: linear-gradient(rgba(6, 144, 190, 0.767) 0 0) var(--p,0) / var(--p,0) no-repeat;
     transition: 0.8s, background-position 0s;
 }
 .testNameTitle:hover{
-    background-color: orange;
+    background-color: rgba(6, 144, 190, 0.767);
     --p:100%;
     color: #000000;
 }
@@ -105,11 +107,11 @@
     padding-top: 20px;
     width: 75%;
     font-size: 28px;
-    border: 1px solid orange;
+    border: 1px solid rgba(6, 144, 190, 0.767);
     padding-left: 10px;
 }
 .bottomRightPart{
-    border-top: 1px solid orange;
+    border-top: 1px solid rgba(6, 144, 190, 0.767);
     padding-top: 10px;
     height: 250px; 
     overflow-y: auto;
@@ -140,11 +142,11 @@
 
 }
 .spanColrChange{
-      color: orange;
+      color: rgba(5, 103, 135, 0.767);
 }
 
 .activeNavLink{
-    background-color: orange;
+    background-color: rgba(6, 144, 190, 0.767);
 }
 
 /* ----contact form---- */
@@ -167,7 +169,7 @@
     align-items: center;
     border-radius: 5px;
     margin-bottom: 50px;
-    background-image: linear-gradient(orange,#ffffff);
+    background-image: linear-gradient(rgba(6, 144, 190, 0.767),#ffffff);
 
 }
 
@@ -179,7 +181,7 @@
 
 .inputFieldsBox{
     height: 20px;
-    border: 1px solid rgb(237, 131, 9);
+    border: 1px solid rgba(6, 144, 190, 0.767);
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -190,12 +192,12 @@
 }
 .inputFieldsBox::placeholder{
     font-size: 16px;
-    color: rgb(237, 131, 9);
+    color: rgba(6, 144, 190, 0.767);
 }
 
 .inputTextareaMessage{
     padding: 10px;
-    border: 1px solid rgb(237, 131, 9);
+    border: 1px solid rgba(6, 144, 190, 0.767)
 }
 
 .inputTextareaMessage:focus{
@@ -203,7 +205,7 @@
 }
 
 .inputTextareaMessage::placeholder{
-    color: rgb(237, 131, 9);
+    color: rgba(6, 144, 190, 0.767);
 }
 .contactFormTitle{
     font-size: 36px;
@@ -213,20 +215,20 @@
 
 .sendEmailButton{
     width: 30%;
-    border: 3px solid rgb(237, 131, 9);
+    border: 3px solid rgba(6, 144, 190, 0.767);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
     margin-top: 20px;
     font-weight: 600;
-    background: linear-gradient(rgb(237, 131, 9) 0 0) var(--p,0)/var(--p,0) no-repeat;
+    background: linear-gradient(rgba(6, 144, 190, 0.767) 0 0) var(--p,0)/var(--p,0) no-repeat;
     transition: 0.8s, background-position 0s;
     cursor: pointer;
 }
 
 .sendEmailButton:hover{
-    background-color: rgb(237, 131, 9);
+    background-color: rgba(6, 144, 190, 0.767);
     --p:100%;
     color: #fff;
 }

@@ -2,6 +2,9 @@ import React, { useEffect,useState} from 'react'
 import './homescreen.css';
 import LabPic from '../../assets/labfile.png';
 import data from './data.json';
+import Footer from '../../CommomComponents/Footer/footer';
+import Modal from '../../CommomComponents/Modal/modal';
+import axios from 'axios';
 
 
 const Homescreen = () => {
@@ -9,20 +12,37 @@ const Homescreen = () => {
     const [activeIndexNav,setActiveIndexNav]= useState(0);
     const [selectedDetailedTest,setSelectedDetailedtest]= useState(null);
     console.log(listOfTest);
+    const [clickAddTest,setClickAddTest]=useState(false);
 
 
     useEffect(()=>{
-        setListOfTest(data.data)
-        setSelectedDetailedtest(data.data[0])
-    },{})
+       fetchDataOnLoading();
+       
+      // console.log(selectedDetailedTest)
+    },[])
+
+    const fetchDataOnLoading= async()=>{
+        await axios.get('http://localhost:8000/test/get').then(response =>{
+           const data=response.data.data;
+           setListOfTest(data);
+           setSelectedDetailedtest(data[0]);
+          }).catch(err=>{
+            console.log(err);
+          })
+    }
+
+    console.log(selectedDetailedTest)
 
 
     const handleClickNavLink= (index) =>{
         setActiveIndexNav(index)
-        setSelectedDetailedtest(data.data[index]);
+        setSelectedDetailedtest(listOfTest[index]);
 
     }
      const[openCreate,setOpenCreate]=useState(false);
+     const handleClosePopup=(val)=>{
+        setClickAddTest(val)
+     }
 
 
 
@@ -34,20 +54,20 @@ const Homescreen = () => {
                    <img className='labLogoHomeScreen' src={LabPic} alt='labpic'/>
                 </div>
                 <div className="introPart">
-                    <div className="titlemini">Enterprise Limited</div>
+                    <div className="titlemini">PathoGenius Diagnostics</div>
                     <div className="titleMajor">Pathology Management System</div>
                     <div className="description1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate impedit illum explicabo nihil? Harum voluptates incidunt earum rem quasi. Asperiores quae enim, eos officiis consequuntur doloribus fugiat animi nobis optio vel dignissimos aut unde, quam minus repellendus assumenda tenetur corrupti tempora. Suscipit doloribus dicta sunt? Ad quas facere quo.
+                    The foundation for successful modern laboratories is a comprehensive lab operations management plan.This enables building and effectively executing an operating philosphy,leading to consistently meeting your scientific and buisness goals. Finding the partner who best helps your organisation develop and execute this plan-from current operations to future strategies- will enable you to achieve the success. 
                     </div>
                     <div className="description2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, laudantium qui, minus minima molestias eaque consectetur temporibus consequatur odit quae doloribus alias quos! Sunt culpa tenetur praesentium ullam necessitatibus recusandae voluptate aliquid saepe repellendus aperiam, quidem accusamus illo repudiandae itaque, at unde nemo in delectus et. Ipsam facere minus laborum.
+                    Our asset management programs bring over 40 years of experience in day-to-day lab operations.We can guide you on the journey to advance lab performance and elevate scientific productivity. Using a proven set of methodologies,products and services with a focus on continuous innovations, together we can simplify,optimize and transform your lab.
                     </div>
                     <div className="topBtnsDiv">
-                        <div className="btns-div" onClick={()=>{setOpenCreate(prev=>!prev)}}>
+                        <div className="btns-div" onClick={()=>setClickAddTest(true)}>
                             Create
                         </div>
                         <div className="btns-div">
-                            Contact
+                            <a style={{textDecoration:"none", color:"black"}} href='#contact'>Contact</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +75,7 @@ const Homescreen = () => {
         </div>
         <div className="testHomeScreen">
             <div className="leftPartTest">
-                <div className="totalTest">4 Test Available</div>
+                <div className="totalTest">{listOfTest?.length} Test Available</div>
                 <div className="testNameDiv">
                     {
                         listOfTest?.map((item,index)=>{
@@ -77,15 +97,20 @@ const Homescreen = () => {
                     </div>
                     <div className="bottomBottomRightPart">
                         <div className="bBRightPartLeftSide">
-                            {
-                                selectedDetailedTest?.requirements.map((item,index)=>{
-                                    return(
-                                        <div className="detailsBlock">
-                                            {item.key}: <span className='spanColrChange'>{item.value}</span>
-                                         </div>
-                                    );
-                                })
-                            }
+                            
+                                <div className="detailsBlock">
+                                {"Fasting"}: <span className='spanColrChange'>{selectedDetailedTest?.fasting}</span>
+                                </div>
+                                <div className="detailsBlock">
+                                {"Abnormal Range"}: <span className='spanColrChange'>{selectedDetailedTest?.abnormalRange}</span>
+                                </div>
+                                <div className="detailsBlock">
+                                {"Normal Range"}: <span className='spanColrChange'>{selectedDetailedTest?.normalRange}</span>
+                                </div>
+                                <div className="detailsBlock">
+                                {"Price"}: <span className='spanColrChange'>{selectedDetailedTest?.price}</span>
+                                </div>
+                            
                             
                         </div>
                         <div className="bBRightPartRightSide">
@@ -110,16 +135,15 @@ const Homescreen = () => {
                 </div>
             </div>
         </div>  
+        
         {
-           openCreate   &&    <div className="modal">
-            <div className="modal-card">
-                <div className="modal-titlebox">
-                    <div className="modal-title">Create New</div>
-                    <div className="x-btn" onClick={()=>{setOpenCreate(prev=>!prev)}}>X</div>
-                </div>
-            </div>
-        </div>
+            
 }
+<Footer/>
+{
+    clickAddTest && <Modal setOpenCreate={handleClosePopup}/>
+}
+
     </div>
   )
 }

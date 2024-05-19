@@ -11,7 +11,7 @@
 .modal-card{
     width: 55%;
     height: 70%;
-    background-color: white;
+    background-image: linear-gradient(rgb(118, 201, 232),#ffffff) ;
     margin: 5%;
     display: flex;
     flex-direction: column;
@@ -29,13 +29,13 @@
 
 .modal-title{
     font-size: 28px;
-    color: orange;
+    color: rgb(7, 7, 6);
     font-weight: 600;
 }
 
 .x-btn{
     font-size: 32px;
-    color: orange;
+    color: rgba(8, 8, 8, 0.938);
     font-weight: 600;
     width: 40px;
     display: flex;
@@ -66,11 +66,12 @@
 }
 .input-label{
     font-size: 12px;
-    color: orange;
+    color: rgb(8, 8, 7);
+    font-weight: 500;
 }
 
 .input-modal{
-    border: 1px solid orange;
+    border: 1px solid rgba(6, 144, 190, 0.767);
     width: 80%;
     height: 35px;
     border-radius: 5px;
@@ -79,7 +80,7 @@
 }
 
 .input-modal::placeholder{
-    color: orange;
+    color: rgba(6, 144, 190, 0.767);
 }
 .input-modal:focus{
     outline: none;
@@ -102,13 +103,13 @@
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    background: linear-gradient(orange 0 0) var(--p,0) / var(--p,0) no-repeat;
+    background: linear-gradient(rgba(6, 144, 190, 0.767) 0 0) var(--p,0) / var(--p,0) no-repeat;
     transition: 0.8s, background-position 0s;
 
 }
 
 .submit-modal:hover{
-    background-color: orange;
+    background-color: rgba(6, 144, 190, 0.767);
     --p:100%;
     color: #000000;
 }

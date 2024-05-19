@@ -4,30 +4,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(236, 10, 108, 0.925);
+    /* background-color: rgba(236, 10, 108, 0.925); */
+    background-color: whitesmoke
 }
 .rightsideNavbar{
-    display:flex;
-    height: 100%;
+    display:flex; 
+    height: 100%; 
 }
 .linksRightNavbar{
-    margin: 0px 10px;
+    margin: 0px 10px; 
     /* border: 1px solid; */
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
-    width: 120px;
+    width: 120px; 
     font-weight: 700;
     cursor: pointer;
-    background: linear-gradient(orange 0 0) var(--p,0) / var(--p,0) no-repeat;
+    background: linear-gradient(rgb(0, 213, 255) 0 0) var(--p,0) / var(--p,0) no-repeat;
     transition: 0.8s, background-position 0s;
     border-radius: 5px;
     font-size: 17px;
-     position: relative; 
+    position: relative;  
+    text-decoration: none;
+    color: #000000;
 }
 
 .linksRightNavbar:hover{
-    background-color: orange;
+    background-color: rgb(0, 213, 255);
     --p:100%;
     color: #000000;
 }
@@ -56,6 +59,15 @@
     border-radius: 50%;
     cursor: pointer;
 }
+.nameBar{
+    /* display: flex; */
+    /* justify-content: center; */
+    color:rgba(6, 144, 190, 0.767) ;
+    margin-right: 780px;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+}
 
 .inputAddTestLabel{
     font-size: 15px;
@@ -69,7 +81,7 @@
     align-items: center;
 }
 .create-addTest:hover{
-    background-color: orange;
+    background-color: rgba(6, 144, 190, 0.767);;
 }
 
 

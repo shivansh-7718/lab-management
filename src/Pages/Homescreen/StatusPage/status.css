@@ -1,0 +1,89 @@
+
+.statusPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(239, 236, 227); */
+    background-color:rgb(118, 201, 232);
+}
+
+.statusPageWorkDiv{
+    width: 70%;
+    padding: 20px 0px;
+}
+.statusBar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.statusTitle{
+    width: 30%;
+    border: 1px solid rgba(6, 144, 190, 0.767);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    
+
+
+}
+.activeBarStatus{
+    background-color: rgba(6, 144, 190, 0.767);
+    color: white;
+}
+
+.statusList{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.statusRowList{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border: 1px solid rgba(6, 144, 190, 0.767);
+    margin-bottom: 20px;
+}
+
+.statusName{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusDrDetails{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.statusBtns{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+    color: black;
+    
+}
+
+.icons{
+    width: 40px;
+    height: 40px;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
